@@ -1,7 +1,6 @@
 package com.bora.airwayWareHouse;
-
-import static org.junit.Assert.assertTrue;
-
+import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
 
 /**
@@ -9,12 +8,18 @@ import org.junit.Test;
  */
 public class AppTest 
 {
+	Warehouse warehouse ;
     /**
      * Rigorous Test :-)
      */
+	@Before
+	public void setup() {
+		warehouse = new Warehouse();
+	}
+	
     @Test
     public void shouldAnswerWithTrue()
     {
-        assertTrue( true );
+    	Assert.assertEquals(true,warehouse.ShouldGiveTrue());
     }
 }
