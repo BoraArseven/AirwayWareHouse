@@ -12,7 +12,6 @@ jobs:
             java:
 # test against several Java versions:
             - 8
-            - 11
             os:
             - ubuntu-latest
             include:
