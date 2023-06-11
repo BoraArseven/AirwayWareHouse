@@ -41,7 +41,7 @@ jobs:
          working-directory: ${{ env.workdir }}
       -  name: Generate JUnit Report
          run: |
-            mvn -f com.bora.airwayWarehouse/pom.xml surefire-report:report-only site:site -DgenerateReports=false
+            mvn -f ${{ env.workdir }}/pom.xml surefire-report:report-only site:site -DgenerateReports=false
          if: ${{ always() }}
       -  name: Archive JUnit Report
          uses: actions/upload-artifact@v2
