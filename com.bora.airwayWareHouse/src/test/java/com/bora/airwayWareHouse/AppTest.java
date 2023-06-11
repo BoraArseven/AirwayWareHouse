@@ -1,29 +1,25 @@
 package com.bora.airwayWareHouse;
-
-import static org.junit.Assert.assertTrue;
-
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-
-import com.bora.airwayWareHouse.App;
 
 /**
  * Unit test for simple App.
  */
 public class AppTest 
 {
-	App app = new App();
+	Warehouse warehouse ;
     /**
      * Rigorous Test :-)
      */
 	@Before
 	public void setup() {
-		app = new App();
+		warehouse = new Warehouse();
 	}
 	
     @Test
     public void shouldAnswerWithTrue()
     {
-        assertTrue( true );
+    	Assert.assertEquals(true,warehouse.ShouldGiveTrue());
     }
 }
