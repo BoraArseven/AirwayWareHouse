@@ -53,5 +53,5 @@ jobs:
          run: |
             mvn verify ${{ matrix.additional-maven-args }}
          env:
-            COVERALLS_REPO_TOKEN: ${{ secrets.COVERALLS_TOKEN }}
+            COVERALLS_REPO_TOKEN: ${{ secrets.COVERALLS_REPO_TOKEN }}
          working-directory: ${{ env.workdir }}
