@@ -160,7 +160,7 @@ since
 								<archive>
 									<manifest>
 										<mainClass>
-											com.examples.hellodockernet.SimpleMongoApp</mainClass>
+											com.bora.airwayWareHouse.Warehouse</mainClass>
 									</manifest>
 								</archive>
 							</configuration>
