@@ -1,4 +1,4 @@
-package com.bora.airwayWareHouse;
+package com.bora.airwayWareHouse.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -7,24 +7,24 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
-
+// This will be used soon.
 import org.hibernate.Session;
 
 @Entity
 @Table(name = "airplanes")
 public class Airplane {
 // Remember to add an empty constructor after created another constructor which disables the hidden empty constructor.
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int id;
 
-    @Column(name = "model", nullable = false)
-    private String model;
+	@Column(name = "model", nullable = false)
+	private String model;
 
-    @Column(name = "capacity", nullable = false)
-    private int capacity;
+	@Column(name = "capacity", nullable = false)
+	private int capacity;
 
-    public int getId() {
+	public int getId() {
 		return id;
 	}
 
@@ -57,7 +57,7 @@ public class Airplane {
 	}
 
 	@ManyToOne
-    private Warehouse warehouse;
+	private Warehouse warehouse;
 
-    // getters and setters
+	// getters and setters
 }
