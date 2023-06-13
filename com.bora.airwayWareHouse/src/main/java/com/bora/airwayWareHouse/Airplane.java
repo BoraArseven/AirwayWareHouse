@@ -13,7 +13,7 @@ import org.hibernate.Session;
 @Entity
 @Table(name = "airplanes")
 public class Airplane {
-
+// Remember to add an empty constructor after created another constructor which disables the hidden empty constructor.
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;

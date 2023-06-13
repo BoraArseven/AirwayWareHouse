@@ -13,7 +13,7 @@ import com.bora.airwayWareHouse.Airplane;
 @Entity
 @Table(name = "warehouses")
 public class Warehouse {
-
+	// Remember to add an empty constructor after created another constructor which disables the hidden empty constructor.
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
