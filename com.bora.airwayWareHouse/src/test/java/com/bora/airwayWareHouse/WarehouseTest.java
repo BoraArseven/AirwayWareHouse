@@ -43,7 +43,9 @@ public class WarehouseTest {
 	public void removeAirplane_ShouldRemoveAirplaneFromList() {
 		Airplane airplane = new Airplane();
 		airplane.setId(1);
-		warehouse.setAirplanes(new ArrayList<>(List.of(airplane)));
+		ArrayList<Airplane> airplanes = new ArrayList<Airplane>();
+		airplanes.add(airplane);
+		warehouse.setAirplanes(airplanes);
 
 		warehouse.removeAirplane(airplane);
 
