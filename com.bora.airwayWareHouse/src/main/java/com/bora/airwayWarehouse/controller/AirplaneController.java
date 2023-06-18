@@ -33,7 +33,7 @@ public class AirplaneController {
 
 	public void deleteAirplane(Airplane airplane) {
 
-		airplaneRepository.delete(airplane.getId());
+		airplaneRepository.delete(airplane);
 		// I am not sure if we are going to have a problem if we call this function even
 		// though delete is not correct. In worst case, this will mean that we refresh
 		// our UI

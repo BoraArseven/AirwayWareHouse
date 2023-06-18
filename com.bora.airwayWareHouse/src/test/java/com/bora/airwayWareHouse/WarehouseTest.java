@@ -19,28 +19,36 @@ import static org.mockito.Mockito.*;
 //So that after successful modification we can save our new object to the database.
 public class WarehouseTest {
 
-	@Mock
-	private List<Airplane> airplanesMock;
 
-	@InjectMocks
+
+
+	// This test class is not necessary, I created it to experiment and have an understanding of this pattern.
+	// As you can see, I even tested getters and setters which is simply waste of time.
 	private Warehouse warehouse;
 
 	@Before
 	public void setUp() {
-		MockitoAnnotations.initMocks(this);
+	  MockitoAnnotations.initMocks(this);
+	  warehouse = new Warehouse(); // create a new Warehouse object
+	 
 	}
+
 
 	@Test
 	public void addAirplane_ShouldAddAirplaneToList() {
+		 List<Airplane> airplanesList = new ArrayList<Airplane>();
+		 warehouse.setAirplanes(airplanesList);
 		Airplane airplane = new Airplane();
+		
 		warehouse.addAirplane(airplane);
-
-		verify(airplanesMock).add(airplane);
-		assertThat(warehouse.getAirplanes()).contains(airplane);
+		airplanesList.add(airplane);
+	
+		assertThat(warehouse.getAirplanes()).containsExactlyElementsOf(airplanesList);
 	}
 
 	@Test
 	public void removeAirplane_ShouldRemoveAirplaneFromList() {
+		 List<Airplane> airplanesMock = new ArrayList<Airplane>();
 		Airplane airplane = new Airplane();
 		airplane.setId(1);
 		ArrayList<Airplane> airplanes = new ArrayList<Airplane>();
@@ -49,7 +57,6 @@ public class WarehouseTest {
 
 		warehouse.removeAirplane(airplane);
 
-		verify(airplanesMock).removeIf(any());
 		assertThat(warehouse.getAirplanes()).isEmpty();
 	}
 

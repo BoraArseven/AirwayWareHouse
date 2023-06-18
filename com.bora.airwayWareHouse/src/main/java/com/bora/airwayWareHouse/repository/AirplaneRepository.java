@@ -11,5 +11,5 @@ public interface AirplaneRepository {
 
 	public void save(Airplane airplane);
 
-	public boolean delete(int id);
+	public void delete(Airplane airplane);
 }

@@ -1,5 +1,6 @@
 package com.bora.airwayWareHouse.model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.Column;
@@ -66,12 +67,12 @@ public class Warehouse {
 	public void addAirplane(Airplane airplane) {
 		this.airplanes.add(airplane);
 	}
-
 	// This is the second method that is written by me. Others were created by
 	// eclipse.
 	public void removeAirplane(Airplane airplanetoremove) {
 		this.airplanes.removeIf(airplane -> airplane.getId() == airplanetoremove.getId());
 
 	}
+	
 
 }
